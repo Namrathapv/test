@@ -1,0 +1,33 @@
+package webdriver;
+
+
+
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class amazontask {
+ChromeDriver Driver;
+@Before
+public void qwe()
+{
+Driver=new ChromeDriver();
+Driver.get("https://www.amazon.in/&quot;);
+}
+@Test
+public void weq()
+{
+
+Driver.findElement(By.xpath("//div[@class='nav-search-field ']/input")).sendKeys("Mobiles");
+Driver.findElement(By.xpath("//span[@id='nav-search-submit-text']/input")).click();
+Driver.findElement(By.xpath("//span[@id='nav-cart-count']")).click();
+Driver.findElement(By.xpath("//span[@id='nav-link-accountList-nav-line-1']")).click();
+Driver.findElement(By.xpath("//input[@id='ap_email']")).sendKeys("abc@123");
+Driver.findElement(By.xpath("//input[@id='continue']")).click();
+Driver.navigate().back();
+Driver.navigate().back();
+
+}
+
+}
